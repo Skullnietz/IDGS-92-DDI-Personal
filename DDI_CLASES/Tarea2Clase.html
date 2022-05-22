@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Clase 2</title>
+</head>
+<body>
+   <center><h1 style="color:green"> Tareas 2da Clase DDI</h1>
+<hr>
+<h2>2 Ejemplos de Hoisting</h2>
+<b> Ejemplo de Hoisted</b>
+<p>
+    Hablando de hoisting, es importante saber que en este lenguaje, una variable puede ser declarada después de ser usada. Sí, ¡esto significa que se puede usar una variable antes de declararla!
+</p>
+<p ><b id="post">Palabra que sera sustituida por x</b> <--- Este no es el valor original</p> 
+<p>Todas las declaraciones van a la parte superior del scope, independientemente de su pocision</p>
+<b> Ejemplo de Inicializaciones</b>
+<p ><b id="post2">Palabra que sera sustituida por a y b</b> <--- Este no es el valor original</p> 
+<p>Solamente se eleva la declaración, - en este caso de b - y no la inicialización - o sea "= 16" - a la cima. y existe gracias a hoisting pero su valor es undefined.</p>
+<hr>
+<h2>8 funciones con variables Scope global y Scope local</h2>
+<b> Scope Global </b>
+<p><b>Puede acceder a las variables chocolate,a,b y c</b></p>
+<p><b>EJEMPLO 1:</b> Abre la console e inserta choco()</p>
+<p><b>EJEMPLO 2:</b> Abre la console e inserta sum()</p>
+<p><b>EJEMPLO 3:</b> Abre la console e inserta rest()</p>
+<p><b>EJEMPLO 4:</b> Abre la console e inserta multi()</p>
+<b> Scope Local </b>
+<p><b>NO Puede acceder a las variables chocolate2,e,f,g</b></p>
+<p><b>EJEMPLO 5:</b> Abre la console e inserta choco2()</p>
+<p><b>EJEMPLO 6:</b> Abre la console e inserta sum2()</p>
+<p><b>EJEMPLO 7:</b> Abre la console e inserta rest2()</p>
+<p><b>EJEMPLO 8:</b> Abre la console e inserta multi2()</p>
+
+</body>
+</html>
+<script>
+    ///////////////////////////////////////////////////////////////////
+    //--------------------- EJEMPLOS DE HOISTING --------------------//
+    ///////////////////////////////////////////////////////////////////
+    ///////--------------------- EJEMPLO 1 --------------------////////
+    x = 8; // Asignamos 8 a x
+    elemento = document.getElementById("post"); //Encontramos un elemento por su ID
+    elemento.innerHTML = x; // Mostramos x en el elemento
+    var x; //Declaramos x
+    /////// -------------------- EJEMPLO 2 --------------------///////
+    var a = 8; //Asignamos 8  = a
+    elemento2 = document.getElementById("post2"); //Encontramos un elemento por su ID
+    elemento2.innerHTML = a+"+"+b; // Mostramos a + b en el elemento
+    var b = 16; //Asignamos 16  = b
+    /////// -------------------- EJEMPLO 3 --------------------////////
+    miNombre("Guizar Peña Carlos Enrique");
+    function miNombre(name){
+        console.log("Mi nombre es "+name)
+    }
+    ////////////////////////////////////////////////////////////////
+    //--------------------- EJEMPLOS DE SCOPE --------------------//
+    ////////////////////////////////////////////////////////////////
+    ///////--------------------- EJEMPLO 1 --------------------/////
+var chocolate = "Esto esta hecho con un Global Scope EJEMPLO 1";
+var a = 12;
+var b = 32;
+var c = 98;
+// El código escrito en esta parte va a poder acceder a alfajor.
+function choco() {
+  // El código escrito en esta parte también va a poder acceder a chocolate.
+  console.log(chocolate);
+}
+   ///////--------------------- EJEMPLO 2 --------------------/////
+   function sum() {
+  // El código escrito en esta parte también va a poder acceder  a y b.
+  var sumR=c*b
+  console.log("Suma de c y b "+sumR);
+}
+   ///////--------------------- EJEMPLO 3 --------------------/////
+   function res() {
+  // El código escrito en esta parte también va a poder acceder a y c.
+  var resR=c*b
+  console.log("Resta de c y b "+resR);
+} 
+   ///////--------------------- EJEMPLO 4 --------------------/////
+   function multi() {
+  // El código escrito en esta parte también va a poder acceder c y b.
+  var multiR=c*b
+  console.log("Multiplicación de c y b "+multiR);
+}  
+   ///////--------------------- EJEMPLO 5--------------------/////
+function choco2() {
+  var chocolate2= 'Esta variable es local'
+  console.log(chocolate2);
+}
+   ///////--------------------- EJEMPLO 6 --------------------/////
+   function sum2() {
+  // El código escrito en esta parte también va a poder acceder  e y f.
+  var e = 2;
+  var f = 8;
+  var suma = e + f;
+  console.log("Suma de e y f "+suma);
+}
+   ///////--------------------- EJEMPLO 7 --------------------/////
+   function res2() {
+  // El código escrito en esta parte también va a poder acceder g y f.
+  var g = 33;
+  var f = 8;
+  var resR=e*g;
+  console.log("Resta de e y g "+resR);
+} 
+   ///////--------------------- EJEMPLO 8 --------------------/////
+   function multi2() {
+  // El código escrito en esta parte también va a poder acceder e y g.
+  var e = 2;
+  var g = 33;
+  var multiR=e*g;
+  console.log("Multiplicación de e y g "+multiR);
+} 
+
+</script>

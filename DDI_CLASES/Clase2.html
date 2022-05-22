@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Clase 2</title>
+</head>
+<body>
+   <center><h1 style="color:green">2da Clase DDI</h1>
+    <hr>
+    <h2>Definir variables y funciones</h2>
+    <b>Abre la consola e insterta:</b>
+<p> Ejemplo: Suma(2,4)</p>
+<p> Ejemplo: Resta(2,4)</p>
+<p> Ejemplo: Multiplicacion(2,4)</p>
+<p> Ejemplo: Division(2,4)</p>
+<hr>
+<h2>Arrays</h2>
+<b>Abre la consola e insterta:</b>
+<b>Para mostrar a Manjarrez</b>
+<p>console.log(alumnosA[1]);</p>
+<p>O</p>
+<b>Para mostrar a Todos los alumnos</b>
+<p>MostarAlumnos()</p>
+<hr>
+<h2>Objeto</h2> 
+<b>Abre la consola e insterta:</b>
+<b>Para mostrar a Diego y su edad</b>
+
+<p>console.log(alumnosO);</p>
+<p>O</p>
+<p>MostarAlumnoyEdad()</p>
+<hr>
+<h2>Hoisting</h2>
+<p>Declarar variables antes de que se procese mi codigo</p>
+<p>var edad; es igual a var edad=undefined;</p>
+<p>Despues se le puede agregar un valor</p>
+<hr>
+<h2>Coersion</h2>
+<h4>Explicita e Implicita</h4>
+<p>Cambiar el tipo de dato a otro, por ejemplo de nuestra variable</p>
+</center>
+<hr>
+<h3>Tarea: 5/11/2022</h3>
+<p>Polimorfismo, Abstracción, Herencia Clases, Propiedades, Constructor, Metodo, Encapsulamiento (Conceptos en PDF)</p>
+<p>  Palabras reservadas</p>
+<p>  ¿Que es block scope, fuentes scope, scope</p>
+<p>  Diferencias de un objeto y un prototype</p>
+<p>  2 Ejemplos de: Hosting , Scope, Cohercion Implicita, Explicita</p>
+<p>  8 Funcion con variables scope global, scope local.</p>
+</body>
+</html>
+<script>
+    var a,d;
+    a=1;
+    d=4;
+    // suma=parseFloat(a)+parseFloat(d);
+    // multiplicacion=parseFloat(a)*parseFloat(d);
+    // divison=parseFloat(a)/parseFloat(d);
+    function Suma(x,y){
+       console.log(x+y); 
+    }
+    function Resta(x,y){
+       console.log(x-y); 
+    }
+    function Division(x,y){
+       console.log(x/y); 
+    }
+    function Multiplicacion(x,y){
+       console.log(x*y); 
+    }
+    var alumnosA = [
+        'Orlando','Manjarrez','Aylin','Eber'
+    ];
+    var alumnosO = {nombre:"Diego",edad:20}
+    function MostarAlumnoyEdad(){
+       return ('El nombre:'+alumnosO.nombre+' y su edad:'+alumnosO.edad);
+    }
+    function MostarAlumnos(){
+        alumnosA.forEach(e=>{
+            console.log(e);
+        })
+    }
+</script>
