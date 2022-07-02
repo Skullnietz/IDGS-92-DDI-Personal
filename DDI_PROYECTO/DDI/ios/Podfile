@@ -19,6 +19,8 @@ target 'DDI' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'react-native-material-kit', :path => '../node_modules/react-native-material-kit'
+
   target 'DDITests' do
     inherit! :complete
     # Pods for testing
