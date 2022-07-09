@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon, Ionicons, MaterialIcons } from 'react-native-vector-icons/Ionicons';
-import { VStack, Input, Button, IconButton, Text, NativeBaseProvider, Center, Box, Divider, Heading } from 'native-base';
+import { VStack, Input,Image, AspectRatio, Button, IconButton, Text, NativeBaseProvider, Center, Box, Divider, Heading } from 'native-base';
 
 
 function SearchBar() {
@@ -14,17 +14,30 @@ function SearchBar() {
     backgroundColor: "gray.50"
   }}>
   <Box><VStack my="4" m={2} p={3} space={5} w="100%" divider={<Box px="2">
+    
           <Divider />
         </Box>}>
       <VStack w="100%" space={5} alignSelf="center">
+      <Center><AspectRatio ratio={{
+    base: 4/1,
+    md: 1 / 10
+  }} height={{
+    base: 65,
+    md: 50
+  }}>
+      <Image  source={{
+      uri: "https://www.mausoleosantaclara.com.mx/Images/demo/logolargo.png"
+    }} alt="Picture of a Flower" />
+    </AspectRatio></Center>
         
         <Heading fontSize="lg" alignItems="center" justifyContent="center">Cementerio Virtual</Heading>
         
         <Input alignItems="center" justifyContent="center" placeholder="Buscar Difunto" variant="filled" width="100%" borderRadius="10" py="1" px="2" borderWidth="0"  />
+        
       </VStack>
     </VStack>
     </Box>
-    </Box>;;
+    </Box>;
 }
 
 function CementerioScreen() {
