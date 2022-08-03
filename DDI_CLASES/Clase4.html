@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clase 4</title>
+</head>
+<body>
+   <center><h1 style="color:green">4ta Clase DDI</h1>
+    <hr>
+    <h2>TEMAS VISTOS</h2>
+    <h3>SWITCH</h3>
+    <h3>LOOP</h3>
+    <h3>METODO</h3>
+
+    
+    
+
+    
+</body>
+</html>
+<script>
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// 4TA CLASE ////////////////////////////
+/////////////////////////////////////////////////////////////////////
+//****************************************************************//
+// LOOP
+var alumnos = ['Erick','Eber','Carlos','Oscar'];
+var frutas = ['Manzana','Pera','Cereza'];
+console.log('///////////////////// FOR OF /////////////////////');
+for (const value of alumnos) {
+  console.log(value);
+}
+// UTILIZANDO INDEX DE UN ARRAY
+console.log('///////////////////// FOR /////////////////////');
+for (let i = 0; i < frutas.length; i++) {  
+  console.log(frutas[i]);
+}
+// METODOS EN JAVASCRIPT
+console.log('///////////////////// METODOS /////////////////////');
+// PUSH
+console.log('///////////////////// PUSH FRUTAS /////////////////////');
+frutas.push("Guayaba");
+for (const value of frutas) {
+  console.log(value);
+}
+console.log('///////////////////// PUSH ALUMNOS /////////////////////');
+alumnos.push("Pancho");
+for (const value of alumnos) {
+  console.log(value);
+}
+// POP
+console.log('///////////////////// POP FRUTAS /////////////////////');
+frutas.pop();
+for (const value of frutas) {
+  console.log(value);
+}
+console.log('///////////////////// POP ALUMNOS /////////////////////');
+alumnos.pop();
+for (const value of alumnos) {
+  console.log(value);
+}
+// UNSHIFT
+console.log('///////////////////// UNSHIFT FRUTAS /////////////////////');
+console.log(frutas.unshift("Aguacate", "Platano"));
+for (const value of frutas) {
+  console.log(value);
+}
+console.log('///////////////////// UNSHIFT ALUMNOS /////////////////////');
+console.log(alumnos.unshift("Emmanuel", "Isaac"));
+for (const value of alumnos) {
+  console.log(value);
+}
+
+// SHIFT
+console.log('///////////////////// SHIFT FRUTAS /////////////////////');
+frutas.shift();
+for (const value of frutas) {
+  console.log(value);
+}
+console.log('///////////////////// SHIFT ALUMNOS /////////////////////');
+alumnos.shift();
+for (const value of alumnos) {
+  console.log(value);
+}
+// INDEXOF
+console.log('///////////////////// INDEXOF FRUTAS /////////////////////');
+console.log(frutas.indexOf("Pera"));
+console.log(frutas[2]);
+console.log('///////////////////// INDEXOF ALUMNOS /////////////////////');
+console.log(alumnos.indexOf("Isaac"));
+console.log(alumnos[0]);
+//var articulos = [{nombre: "Bici" , costo: 20},{nombre: 'TV', costo: 5000},{nombre: 'Bici' , costo: 3000}];
+// FILTER 
+function esSuficientementeGrande(elemento) {
+  return elemento.costo>= 50;
+}
+var articulos = [{nombre: "Bici" , costo: 20},{nombre: 'TV', costo: 5000},{nombre: 'Bici' , costo: 3000}].filter(esSuficientementeGrande);
+console.log(articulos);
+// MAP
+var preciosconiva = articulos.map(function(elemento) {
+   return elemento.costo * 1.16;
+});
+console.log(preciosconiva);
+// DIFERENCIAS FILTER Y MAP
+
+// 
+</script>

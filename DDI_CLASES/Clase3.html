@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clase 3</title>
+</head>
+<body>
+   <center><h1 style="color:green">3ra Clase DDI</h1>
+    <hr>
+    <h2>Truthy & Falsy</h2>
+    <b>Falsy</b>
+    <p>Son valores que son verdaderos o falsos </p>
+    <p>Srting vacio = ""</p>
+    <p>0-0</p>
+    <p>False</p>
+    <b>Truthy</b>
+    <p>Contienen un valor</p>
+    <hr>
+    <h2>Ejemplo de Login</h2>
+    <textarea rows="5" style="width:150px">// Ejemplo de login 
+    //var usuario = true;
+    //var usuario = false;
+    // if (usuario = true) {
+    //     console.log{("El usuario tiene acceso al contenido");}else{console.log("El usuario NO tiene acceso al contenido");}
+    // }</textarea>
+    <hr>
+    <h3>Tarea P4 Funciones, P5 scope local y scope global, P6 coersion en js</h3>
+    <ol>
+        <li>P4 Funciones</li>
+        <li>P5 scope local y scope global</li>
+        <li>P6 coersion en js</li>
+        
+    </ol>
+    
+
+    
+</body>
+</html>
+<script>
+    //function suma(n1,n2) { return n1 +n2;}
+    //Falsy
+
+    // Ejemplo de login 
+    //var usuario = true;
+    //var usuario = false;
+    // if (usuario = true) {
+    //     console.log{("El usuario tiene acceso al contenido");}else{console.log("El usuario NO tiene acceso al contenido");}
+    // }
+
+    // Ejemplo  If ternario
+    //var numero = 1;
+    //var resultado = numero === 1 ? 'Si son un 1' : 'No soy un 1';
+    // console.log(resultado);
+
+///////////////////////////////////////////////////////////////
+//****************** PRACTICAS DE CLASE **********************//
+//****************** -Eber Palma Caballero ********************//
+//************** -Carlos Enrique Guizar Peña ******************//
+//***********************************************************//
+
+
+    //////////////////////// Scope Global y Local ////////////////////
+    ///////--------------------- SCOPE GLOBAL --------------------/////
+      
+var chocolate = "Esto esta hecho con un Global Scope EJEMPLO 1";
+var b = 32;
+var c = 98;
+// El código escrito en esta parte va a poder acceder a alfajor.
+function choco() {
+  // El código escrito en esta parte también va a poder acceder a chocolate.
+  console.log(chocolate);
+}
+
+//    ///////--------------------- SCOPE GLOBAL --------------------/////
+//    function sum() {
+//   // El código escrito en esta parte también va a poder acceder  a y b.
+//   var sumR=c*b
+//   console.log("Suma de c y b "+sumR);
+// }
+//        ///////--------------------- SCOPE LOCAL--------------------/////
+// function choco2() {
+//   var chocolate2= 'Esta variable es local'
+//   console.log(chocolate2);
+// }
+//    ///////--------------------- SCOPE LOCAL --------------------/////
+//    function sum2() {
+//   // El código escrito en esta parte también va a poder acceder  e y f.
+//   var e = 2;
+//   var f = 8;
+//   var suma = e + f;
+//   console.log("Suma de e y f "+suma);
+// }
+// ////////////////////////////// COERSION JS  ////////////////
+// // ************** COERSION IMPLICITA 1 *********************//
+// let f = 5;
+// let g = '6';
+// let suma = f + g;  // '56'
+// typeof suma;       // string
+// // ************** COERSION IMPLICITA 2 *********************//
+// let h = true;
+// let i = 1;
+// let connect = h + i;  // 2
+// typeof connect;       // number
+// // ************** COERSION EXPLICITA 1 *********************//
+// let j = true;
+// valuej = String(j);  // el valor es un string "true"
+// typeof valuej;       // string
+// // ************** COERSION EXPLICITA 2 *********************//
+// let l = 5+12.5; // Float
+// let k = parseInt(l); // Int
+// typeof k;       // int
+// // ************** COERSION EXPLICITA 3 *********************//
+// let m = '4';
+// let num = Number(m);  // 4
+// typeof num; 
+// // ************** COERSION EXPLICITA 4 *********************//
+// let n = 1;
+// let o = Boolean(b);  // true
+// typeof o;
+// // ************** COERSION EXPLICITA 5 *********************//
+// let p = Number(" 12s "); // NaN
+// typeof o;
+// // ************** COERSION EXPLICITA 6 *********************//
+// let q = Number(null); // 0
+
+/////////////////// SWITCH /////////////////////
+// 4 SWITCH
+//6 LOOP CON FUNCIONES(FOR & WHILE)
+// FOR | FOR VAR | WHILE 2 DE CADA UNO
+//
+// SWITCH 1 TIENDA ELECTRONICA
+console.log('Celular'); 
+switch ('Celular') {
+  case 'Laptop':
+    console.log(' La Laptop tiene un precio de $11,200.');
+    break;
+  case 'Celular':
+    console.log('El Celular tiene un precio de $7,000.');
+    break;
+  case 'TV':
+    console.log('La TV tiene un precio de $6,000.');
+    break;
+  case 'Echo Dot':
+    console.log('El Echo Dot cuesta $800.');
+    break;
+  case 'Fire TV':
+  case 'Chromecast':
+    console.log('El Chromecast cuesta $700.');
+    break;
+  default:
+    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+}
+// SWITCH 2 OPERACIONES
+
+// SWITCH 3 VEHICULOS
+console.log('Avion'); 
+var Vehiculo = 'Avion';
+switch (Vehiculo) {
+  case 'Carro':
+  case 'Camion':
+  case 'Moto':
+  case 'Bicicleta':
+    console.log('Este vehiculo es terrestre.');
+    break;
+  case 'Avion':
+  console.log('Este vehiculo es aereo.');
+  break;
+  default:
+    console.log('No esta en la lista.');
+}
+// SWITCH 4 DIA DE HOY
+console.log('Hoy es ->')
+switch (new Date().getDay()) {
+  case 0:
+    day = "Domingo";
+    console.log(day);
+    break;
+  case 1:
+    day = "Lunes";
+    console.log(day);
+    break;
+  case 2:
+     day = "Martes";
+     console.log(day);
+    break;
+  case 3:
+    day = "Miercoles";
+    console.log(day);
+    break;
+  case 4:
+    day = "Jueves";
+    console.log(day);
+    break;
+  case 5:
+    day = "Viernes";
+    console.log(day);
+    break;
+  case 6:
+    day = "Sabado";
+    console.log(day);
+}
+// ARRAYS PARA LOOPS
+let team = ['Carlos', 'Jairo', 'Eber'];
+let grupo = ['91','92','93'];
+let numeros = [25,50,100];
+// FUNCIONES FOR (2 EJEMPLOS)
+console.log('FOR');
+for (let i = 0; i < 3; i++) {  
+  console.log(team[i]);
+}
+for (let i = 0; i < 3; i++) {  
+  console.log('IDGS-'+grupo[i]);
+}
+// FUNCIONES FOR OF (2 EJEMPLOS)
+console.log('FOR OF');
+function multip (num){
+    num *= 100;
+    console.log(num);
+}
+function suma(num){
+    num += 100;
+    console.log(num);
+}
+for (let value of numeros) {
+  multip(value);
+}
+for (let value of numeros) {
+  suma(value);
+}
+// FUNCIONES WHILE (2 EJEMPLOS)
+console.log('WHILE');
+n = 0;
+while (n < team.length) {
+  console.log(team[n]);
+  n ++;
+}
+g=0;
+while (g < grupo.length) {
+  console.log('IDGS-'+grupo[g]);
+  g ++;
+}
+</script>
